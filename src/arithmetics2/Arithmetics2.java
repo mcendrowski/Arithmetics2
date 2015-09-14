@@ -10,6 +10,8 @@ import java.util.Scanner;
 /**
  *
  * @author MCENDROWSKI
+ * Program allows to perform any two-argument mathematical operation, earlier defined in modules.
+ * Currently there is adding, substracting, mutliplying, dividing and example of a function.
  */
 public class Arithmetics2 {
 
@@ -19,7 +21,7 @@ public class Arithmetics2 {
     public static void main(String[] args) {
         int first_number;
         int second_number;
-        int third_number;
+//        int third_number;
         String mathematical_calculation;
         String tryAgain;
 
@@ -37,7 +39,7 @@ public class Arithmetics2 {
 
             Scanner keyboard2 = new Scanner(System.in);
             mathematical_calculation = keyboard2.nextLine();
-
+// all the modules are instanciated - I wonder how to instanciate only one.
             Adding2 calc1 = new Adding2(first_number, second_number);
             Substraction2 calc2 = new Substraction2(first_number, second_number);
             Multiplication2 calc3 = new Multiplication2(first_number, second_number);
@@ -60,6 +62,8 @@ public class Arithmetics2 {
 //        else {
 //            calc2 = new Deduction2(first_number, second_number);
 //        }
+            // on the basis of a choice, a relevant instance of PerformCalculation2 is created
+            // PerformCalculation2 is an abstract layer with two methods: calc - to calculate result and returnResult - to show result with a comment
             PerformCalculation2 pc;
             if ("A".equalsIgnoreCase(mathematical_calculation)) {
                 pc = new PerformCalculation2(calc1);
