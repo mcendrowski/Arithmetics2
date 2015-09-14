@@ -12,6 +12,7 @@ import java.util.Scanner;
  * @author MCENDROWSKI
  */
 public class Arithmetics2 {
+    
 
     /**
      * @param args the command line arguments
@@ -34,29 +35,50 @@ public class Arithmetics2 {
 
         Scanner keyboard2 = new Scanner(System.in);
         mathematical_calculation = keyboard2.nextLine();
-
+        
+        Addition2 calc=new Addition2(first_number, second_number);
+        Deduction2 calc2=new Deduction2(first_number, second_number);
+        
 //        if ("A".equalsIgnoreCase(mathematical_calculation)) {
-//            Addition2 calc = new Addition2(first_number, second_number);
+//            calc = new Addition2(first_number, second_number);
+//            
 //        } 
 //        else if ("D".equalsIgnoreCase(mathematical_calculation)) {
-//            Addition2 calc = new Addition2(first_number, second_number);
+//            calc2 = new Deduction2(first_number, second_number);
 //        } 
 //        else if ("M".equalsIgnoreCase(mathematical_calculation)) {
-//            Addition2 calc = new Addition2(first_number, second_number);
+//            calc = new Addition2(first_number, second_number);
 //        } 
 //        else if ("V".equalsIgnoreCase(mathematical_calculation)) {
-//            Addition2 calc = new Addition2(first_number, second_number);
+//            calc = new Addition2(first_number, second_number);
 //        } 
 //        else {
-//            Addition2 calc = new Addition2(first_number, second_number);
+//            calc2 = new Deduction2(first_number, second_number);
 //        }
+        PerformCalculation2 pc;
+           if ("A".equalsIgnoreCase(mathematical_calculation)) {
+           pc = new PerformCalculation2(calc);
+            
+        } 
+        else if ("D".equalsIgnoreCase(mathematical_calculation)) {
+            pc = new PerformCalculation2(calc2);
+        } 
+        else if ("M".equalsIgnoreCase(mathematical_calculation)) {
+           pc = new PerformCalculation2(calc2);
+        } 
+        else if ("V".equalsIgnoreCase(mathematical_calculation)) {
+           pc = new PerformCalculation2(calc2);
+        } 
+        else {
+           pc = new PerformCalculation2(calc2);
+        }
 
 //             calc.calculate();
 //             System.out.println(calc.showResult());
         
-        Addition2 calc = new Addition2(first_number, second_number);
+//        Addition2 calc = new Addition2(first_number, second_number);
         
-        PerformCalculation2 pc = new PerformCalculation2(calc);
+//        PerformCalculation2 pc = new PerformCalculation2(calc2);
         pc.calc();
         System.out.println(pc.returnResult());
 

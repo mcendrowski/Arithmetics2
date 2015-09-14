@@ -9,12 +9,12 @@ package arithmetics2;
  *
  * @author MCENDROWSKI
  */
-public class Addition2 implements Calculation2  {
+public class Deduction2 implements Calculation2  {
     private double first_number;
     private double second_number;
     private double result;
 
-    public Addition2 (double first_number, double second_number) {
+    public Deduction2 (double first_number, double second_number) {
         this.first_number = first_number;
         this.second_number = second_number;
 //        this.result=this.first_number+this.second_number;
@@ -25,12 +25,12 @@ public class Addition2 implements Calculation2  {
 
     @Override
     public void calculate() {
-        this.result=this.first_number+this.second_number;
+        this.result=this.first_number-this.second_number;
     }
     
     @Override
     public String showResult(){
-        return this.first_number + " + "+this.second_number+" = "+this.result;
+        return this.first_number + " - "+this.second_number+" = "+this.result;
     }
     
 }
